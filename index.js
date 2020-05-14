@@ -19,6 +19,7 @@ app.use(session({
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 
+// Login form (views/login.ejs)
 app.post('/auth', function(request, response) {
 	var username = request.body.username;
   var password = request.body.password;
@@ -48,13 +49,13 @@ app.set('views', path.join(__dirname, 'views'))
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({ extended: false }))
 
-// Connection to the SQlite database
+// Connection to the SQlite3 database data/favoritesongs.db
 const db_name = path.join(__dirname, 'data', 'favoritesongs.db')
 const db = new sqlite3.Database(db_name, (err) => {
   if (err) {
     return console.error(err.message)
   }
-  console.log("Vellykket tilkobling til databasen 'favoritesongs.db'")
+  console.log("Successful connection to the database 'favoritesongs.db'")
 })
 
 // Table creation named FavoriteSongs
@@ -70,7 +71,7 @@ db.run(sql_create, (err) => {
   if (err) {
     return console.error(err.message)
   }
-  console.log("Vellykket oppretting av tabellen 'FavoriteSongs'")
+  console.log("Successful creation of the table 'FavoriteSongs'")
 
   // Table feeding to table FavoriteSongs
   var sql_insert = `INSERT or IGNORE INTO FavoriteSongs 
@@ -83,7 +84,7 @@ db.run(sql_create, (err) => {
     if (err) {
       return console.error(err.message)
     }
-    console.log("Vellykket lagring i tabell 'Favoritesongs'")
+    console.log("Successful storage in table 'Favoritesongs'")
   })
 })
 
@@ -99,9 +100,9 @@ db.run(sql_create, (err) => {
   if (err) {
     return console.error(err.message)
   }
-  console.log("Vellykket oppretting av tabellen 'accounts'")
+  console.log("Successful creation of the table 'accounts'")
 
-  // Table feeding to table FavoriteSongs
+  // Table feeding to table accounts
   sql_insert = `INSERT or IGNORE INTO accounts 
   (id, username, password, email) VALUES
   (1, 'post@neoweb.no', 'test', 'post@neoweb.no'),
@@ -112,7 +113,7 @@ db.run(sql_create, (err) => {
     if (err) {
       return console.error(err.message)
     }
-    console.log("Vellykket lagring i tabell 'accounts'")
+    console.log("Successful storage in table 'accounts'")
   })
 })
 

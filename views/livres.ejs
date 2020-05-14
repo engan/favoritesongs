@@ -1,6 +1,6 @@
 <%- include("_header") -%>
 
-<h1>Liste over <%= model.length %> favorittsanger</h1>
+<h1>List of <%= model.length%> favorite songs</h1>
 <br />
 
 <div class="table-responsive-sm">
@@ -8,11 +8,11 @@
   <table class="table table-hover" id="table_id">
     <thead>
       <tr>
-        <th>Artist / Gruppe</th>
-        <th>Favorittsang</th>
-        <th>Utgitt årstall</th>
+        <th>Artist / Group</th>
+        <th>Favourite song</th>
+        <th>Published year</th>
         <th class="d-print-none">
-          <a class="btn btn-sm btn-success" href="/create">Legg til</a>
+          <a class="btn btn-sm btn-success" href="/create">Add</a>
         </th>
       </tr>
     </thead>
@@ -23,8 +23,8 @@
           <td><%= song.SongTitle %></td>
           <td><%= song.Year %></td>
           <td class="d-print-none">
-            <a class="btn btn-sm btn-warning" href="/edit/<%= song.Favorite_ID %>">Endre</a>
-            <a class="btn btn-sm btn-danger" href="/delete/<%= song.Favorite_ID %>">Slett</a>
+            <a class="btn btn-sm btn-warning" href="/edit/<%= song.Favorite_ID %>">Update</a>
+            <a class="btn btn-sm btn-danger" href="/delete/<%= song.Favorite_ID %>">Delete</a>
           </td>
         </tr>
       <% } %>
