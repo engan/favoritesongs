@@ -1,5 +1,5 @@
-input {
-    width: 250px !important;
+.navbar {
+    margin-bottom: 30px !important;
 }
 footer {
     margin-top: 30px !important;
@@ -10,7 +10,7 @@ footer {
     font-family: Tahoma, Geneva, sans-serif;
 }
 .login-form h1 {
-    text-align: center;
+    text-align: left;
     color: #4d4d4d;
     font-size: 24px;
     padding: 20px 0 20px 0;
