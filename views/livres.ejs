@@ -1,0 +1,36 @@
+<%- include("_header") -%>
+
+<h1>Liste over <%= model.length %> favorittsanger</h1>
+<br />
+
+<div class="table-responsive-sm">
+
+  <table class="table table-hover" id="table_id">
+    <thead>
+      <tr>
+        <th>Artist / Gruppe</th>
+        <th>Favorittsang</th>
+        <th>Utgitt årstall</th>
+        <th class="d-print-none">
+          <a class="btn btn-sm btn-success" href="/create">Legg til</a>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (const song of model) { %>
+        <tr>
+          <td><%= song.Bandname %></td>
+          <td><%= song.SongTitle %></td>
+          <td><%= song.Year %></td>
+          <td class="d-print-none">
+            <a class="btn btn-sm btn-warning" href="/edit/<%= song.Favorite_ID %>">Endre</a>
+            <a class="btn btn-sm btn-danger" href="/delete/<%= song.Favorite_ID %>">Slett</a>
+          </td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+
+</div>
+
+<%- include("_footer") -%>

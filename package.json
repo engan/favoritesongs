@@ -1,0 +1,19 @@
+{
+  "name": "apptest",
+  "version": "1.0.0",
+  "description": "CRUD SPA REST API application with Express, Embedded JavaScript templates and SQlite3",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "sqlite3": "^4.2.0"
+  }
+}

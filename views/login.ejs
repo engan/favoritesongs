@@ -1,0 +1,15 @@
+<%- include("_header") -%>
+
+<div class="login-form">
+    <h1>Login Form</h1>
+    <form action="auth" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit">
+    </form>
+    <p> </p>
+    <p>Brukernavn: <b>gjest@neoweb.no</b><br />Passord: <b>test</b></p>
+    <p></p>
+</div>
+
+<%- include("_footer") -%>
