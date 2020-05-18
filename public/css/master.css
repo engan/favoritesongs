@@ -4,6 +4,9 @@
 footer {
     margin-top: 30px !important;
 }
+.d-print-none {
+    text-align: right;
+}
 .login-form {
     width: 300px;
     margin: 0 auto;
