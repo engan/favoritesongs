@@ -4,3 +4,5 @@ RUN WITH:
 node index
 
 Server: http://localhost:3000/
+
+![Screenshot](screenshot.png)

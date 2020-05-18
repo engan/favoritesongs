@@ -76,9 +76,17 @@ db.run(sql_create, (err) => {
   // Table feeding to table FavoriteSongs
   var sql_insert = `INSERT or IGNORE INTO FavoriteSongs 
   (Favorite_ID, User_ID, Bandname, SongTitle, Year) VALUES
-  (1, 1, 'Band A', 'Favorittsang nr 1', '2018'),
-  (2, 1, 'Band A', 'Favorittsang nr 2', '2019'),
-  (3, 2, 'Band B', 'Favorittsang nr 3', '2020');`
+  (1, 1, 'Steffi', 'Sadness', '2011'),
+  (2, 1, 'Tensnake', 'In the End (I Want You to Cry)', '2009'),
+  (3, 1, 'Axel Boman', 'Purple Drank', '2010'),
+  (4, 1, 'Omar-S', 'Psychotic Photosynthesis', '2007'),
+  (5, 1, 'Luomo', 'Tessio', '2000'),
+  (6, 1, 'The Other People Place', 'Sorrow and a Cup of Joe', '2002'),
+  (7, 1, 'DJ Koze', 'Cicely', '2007'),
+  (8, 1, 'Justin Martin', 'The Sad Piano (Charles Webster Remix)', '2003'),
+  (9, 1, 'Andrés', 'New for U', '2012'),
+  (10, 1, 'Gunnar Wendel', '578 (Omar S. Rude Boy Warm Mix)', '2010'),
+  (11, 1, 'Chez N Trent', 'Morning Factory', '1994');`
 
   db.run(sql_insert, (err) => {
     if (err) {
